@@ -50,6 +50,8 @@ class ListProductService implements ListProductServiceInterface
                 $attribute->set('productProperties', $properties[$product->getNumber()]->getGroups());
             }
 
+            //SetManufacturerLink for Frontend
+            $attribute->set('supplierLink', $product->getManufacturer()->getLink());
         }
 
         return $products;
